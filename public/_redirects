@@ -1,0 +1,6 @@
+# Original Zygn source, fetched on Netlify without executing its scripts.
+/_zygn_source/*  https://audit.zygn.app/zygn/:splat  200
+# Friendly routes; no global SPA fallback that could swallow source errors.
+/thank-you/  /thank-you.html  200
+/thank-you   /thank-you.html  200
+/thankyou   /thank-you.html  301

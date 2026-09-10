@@ -1,0 +1,5 @@
+export default function Blueprint() {
+  return (
+    <section className="section mint" id="blueprint"><div className="wrap"><div className="section-head"><p className="kicker">A more connected way to work</p><h2 className="two-line-heading"><span>Stop Piecing The Project Together.</span><span>Start With A Connected Way To Run It.</span></h2><p className="lede">A message tells someone something.<br /> <strong>A workflow makes clear what happens next.</strong></p></div><div className="blueprint-steps"><article><span>01</span><h3>Know the next action.</h3><p>Who owns it, what it depends on, and when it needs to happen.</p></article><article><span>02</span><h3>Keep the context.</h3><p>The client, the scope, the materials and the progress belong to the same project.</p></article><article><span>03</span><h3>See the wider picture.</h3><p>Connect the daily work with the people, costs and decisions behind it.</p></article></div><p className="section-closer">From the first customer enquiry to final installation, Zygn connects the work of an interior business.</p></div></section>
+  );
+}

@@ -1,0 +1,4 @@
+@import './styles/zygn.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

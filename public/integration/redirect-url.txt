@@ -1,0 +1,7 @@
+PROPOSED DESTINATION ONLY. Publish thank-you.html and replace the base URL before saving this in TidyCal.
+
+https://YOUR-NETLIFY-SITE.netlify.app/thank-you.html?name={{contact.name}}&date={{booking.date}}&time={{booking.time}}&timezone={{booking.timezone}}&starts_at={{booking.starts_at}}&meeting_url={{booking.meeting_url}}&reschedule_url={{booking.reschedule_url}}&host={{host.name}}
+
+Booking type: marketingptgtech/30min-free-zygn-demo
+Set under Advanced > Notifications > Redirect to custom page after booking.
+Account setting has NOT been changed by this build.
