@@ -79,7 +79,15 @@ export default function Hero() {
               src="https://embed-ssl.wistia.com/deliveries/78fcad4abd46edcb76d6a524507c9c7091f51eac.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button_rounded=1&amp;image_play_button_color=2949E5e0"
               width="960"
             />
-            <div id="vsl-player-mount"></div>
+            <iframe
+              id="vsl-player-mount"
+              title="Zygn video"
+              src="https://fast.wistia.net/embed/iframe/igmr5mwein?videoFoam=true&autoPlay=true&silentAutoPlay=true&muted=true&playsinline=true&preload=auto&playSuspendedOffScreen=false&volumeControl=true&playbar=true&smallPlayButton=true&playButton=true"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
           </div>
           <figcaption>
             Original Zygn VSL <span>Autoplays muted</span>
