@@ -170,7 +170,7 @@ export default function Hero() {
             >
               <path d="m5 12 4 4L19 6"></path>
             </svg>
-            Zygn + ChatGPT
+            Zygn + claude 
           </li>
         </ul>
         <div className="hero-flow">
