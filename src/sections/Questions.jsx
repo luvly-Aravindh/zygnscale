@@ -77,7 +77,7 @@ export default function Questions() {
             </summary>
             <div className="faq-answer">
               <p>
-                claude starts with 2 months completely free, with no credit card
+                Claude starts with 2 months completely free, with no credit card
                 required. After that, you commit to a 12-month paid subscription
                 for full platform access. Ask the team to confirm the
                 subscription price and applicable terms before you start.
@@ -169,7 +169,7 @@ export default function Questions() {
           </details>
           <details>
             <summary>
-              <span>What is Zygn + claude ? Do I need to understand MCP?</span>
+              <span>What is Zygn + Claude ? Do I need to understand MCP?</span>
               <svg
                 aria-hidden="true"
                 className="icon"
@@ -186,7 +186,7 @@ export default function Questions() {
             <div className="faq-answer">
               <p>
                 You do not need to understand the protocol to start. Zygn’s MCP
-                connector connects Zygn data with claude so you can ask
+                connector connects Zygn data with Claude so you can ask
                 questions in natural language about revenue, margins, sales,
                 procurement, project delays and the wider business. Ask the team
                 to demonstrate access, setup and the analysis relevant to your
