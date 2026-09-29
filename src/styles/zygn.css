@@ -853,23 +853,18 @@ ol {
   max-width: 230px;
   color: #718068;
 }
-.screenshot-link {
+.screenshot-media {
   position: absolute;
   inset: 0;
   display: block;
-  cursor: zoom-in;
 }
-.screenshot-link img {
+.screenshot-media img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  visibility: hidden;
   background: #fff;
-}
-.is-loaded .screenshot-link img {
-  visibility: visible;
 }
 .is-loaded .media-fallback {
   display: none;
