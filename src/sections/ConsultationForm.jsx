@@ -122,12 +122,24 @@ export default function ConsultationForm() {
       if (params.has(k)) payload[k] = params.get(k).slice(0, 250);
     });
 
+    // Only the form answers go to the inbox.
+    const lead = {
+      name: payload.full_name,
+      email: payload.email,
+      phone: payload.phone,
+      firm_name: payload.firm_name,
+      employee_count: String(payload.employee_count),
+      role: payload.role,
+      challenge: payload.challenge,
+      consent: "Yes",
+    };
+
     setSending(true);
     try {
       const destination = buildBookingUrl(payload);
       setStatus({ text: "Saving your details before opening the calendar…", error: false });
       // Capture the lead in Getnos Desk first. Duplicate is treated as success.
-      const result = await submitLead(payload);
+      const result = await submitLead(lead);
       if (result && result.status !== "success" && !result.leadId && !result.duplicate) {
         throw new Error(result.message || "Details were not accepted.");
       }
