@@ -89,9 +89,7 @@ export default function Hero() {
               scrolling="no"
             ></iframe>
           </div>
-          <figcaption>
-            Original Zygn VSL <span>Autoplays muted</span>
-          </figcaption>
+       
         </figure>
         <div className="cta-group">
           <a className="button" href="#consultation">
