@@ -3,7 +3,7 @@
 // (see /integration). Mirrors the original v7 handoff exactly.
 
 export const BOOKING_URL =
-  "https://tidycal.com/marketingptgtech/30min-free-zygn-demo";
+  "https://tidycal.com/marketingptgtech/30-min-free-zygn-demo";
 export const SOURCE = "zygn-consultation-long-form-react";
 export const CONSENT_VERSION = "zygn-consultation-tidycal-contact-v2";
 
@@ -12,7 +12,7 @@ export function buildBookingUrl(payload) {
   if (
     url.protocol !== "https:" ||
     url.hostname !== "tidycal.com" ||
-    url.pathname.replace(/\/$/, "") !== "/marketingptgtech/30min-free-zygn-demo"
+    url.pathname.replace(/\/$/, "") !== "/marketingptgtech/30-min-free-zygn-demo"
   ) {
     throw new Error("Unexpected booking destination.");
   }

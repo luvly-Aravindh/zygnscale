@@ -16,7 +16,7 @@ Do not redirect merely on `select_date` or `select_time`. Those actions are not 
 
 ## 2. What is already wired
 
-Destination: `https://tidycal.com/marketingptgtech/30min-free-zygn-demo`
+Destination: `https://tidycal.com/marketingptgtech/30-min-free-zygn-demo`
 
 The form generates `?name=...&email=...`. TidyCal publicly documents name/email prefill. No undocumented native phone or `a1` parameter is assumed.
 
@@ -30,19 +30,30 @@ Native prefill references:
 
 ## 3. Activate phone and qualification-answer autofill
 
-TidyCal defaults to name and email. Its custom intake questions collect additional information. In this booking type, open Advanced > Questions, enable questions to attendees, and create required Short text questions with these exact labels:
+Checked against the live booking page on 2026-10-07. It currently asks for:
 
-| Question | Value carried from this page |
+| TidyCal field | Filled from | How |
+| --- | --- | --- |
+| Your name | Full name | Native `?name=` (works without GTM) |
+| Your email | Email address | Native `?email=` (works without GTM) |
+| Mobile (phone widget, `question-9704722`) | Mobile number with country code | GTM adapter below |
+
+The adapter matches the existing "Mobile" phone question and fills it through
+TidyCal's intl-tel-input widget, so TidyCal stores the full international number
+(for example `+919812345678`) and the flag switches to the right country.
+
+Firm name, employees, role and challenge are already saved to Getnos Desk when the
+form is submitted. To also see them inside TidyCal, add Short text questions under
+Advanced > Questions with these exact labels and the adapter fills them too:
+
+| Question label | Value carried from this page |
 | --- | --- |
-| Mobile number | International phone number, including +91 or the selected code |
 | Number of employees | Whole number |
 | Firm name | Firm name |
 | Your role | Selected role |
 | Main challenge | Selected challenge |
 
-Use Short text for the mobile question with this adapter; a specialised phone widget may split country and national number and needs separate live-DOM testing.
-
-In TidyCal's Integrations > Analytics, connect your Google Tag Manager container. In that container, create a Custom HTML tag using the complete contents of `tidycal-prefill-gtm.html`. Fire it on DOM Ready, restricted to hostname `tidycal.com` and path `/marketingptgtech/30min-free-zygn-demo`. Test in Preview before publishing. Do not paste the tag into the landing page: it needs access to TidyCal's own rendered fields.
+In TidyCal's Integrations > Analytics, connect your Google Tag Manager container. In that container, create a Custom HTML tag using the complete contents of `tidycal-prefill-gtm.html`. Fire it on DOM Ready, restricted to hostname `tidycal.com` and path `/marketingptgtech/30-min-free-zygn-demo`. Test in Preview before publishing. Do not paste the tag into the landing page: it needs access to TidyCal's own rendered fields.
 
 This is a custom DOM adapter, not a provider-guaranteed prefill API. It waits for labelled fields, fills only empty inputs, emits normal input/change events, respects later user edits and removes the fragment. Update its label mappings or explicit selectors if the booking form markup differs. Ad blockers, consent settings or provider script policy may prevent the tag from running; required visible questions remain the fallback, and users must be able to type their answers.
 
